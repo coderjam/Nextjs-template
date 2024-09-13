@@ -5,7 +5,7 @@ import { button as buttonStyles } from "@nextui-org/theme";
 import { siteConfig } from "@/config/site";
 import { title, subtitle } from "@/components/primitives";
 import { GithubIcon } from "@/components/icons";
-
+import "./page.style.scss";
 export default function Home() {
 	return (
 		<section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
@@ -45,6 +45,11 @@ export default function Home() {
 						Get started by editing <Code color="primary">app/page.tsx</Code>
 					</span>
 				</Snippet>
+			</div>
+			<div className="custom-container">
+				{Array.from({ length: 100 }, (_, index) => (
+					<div key={index}>{index + 1}: 这是内容页面</div>
+				))}
 			</div>
 		</section>
 	);
